@@ -8,7 +8,7 @@ namespace ZooAnimalsAssignment
         {
 
             // Get hunger Level from the user
-            Console.WriteLine("Enter the animal's hunger level (1-10): ");
+            Console.Write("Enter the animal's hunger level (1-10): ");
             int hungerLevel = int.Parse(Console.ReadLine());
             // Add code here for if else statement
             if (hungerLevel >= 8)
@@ -26,10 +26,11 @@ namespace ZooAnimalsAssignment
 
             // Terenary Operator (Animal Sounds)
             string sounds = (hungerLevel >= 8) ? "Listen to the Lion: Roar!" : "Listen to the Monkey: Ooh ooh!";
+            Console.WriteLine(sounds);
 
 
             // Get input from the user for the day
-            Console.WriteLine("Enter a number (1-7) to represent the day of the week. Sunday starts at 1: ");
+            Console.Write("Enter a number (1-7) to represent the day of the week. Sunday starts at 1: ");
             int day = int.Parse(Console.ReadLine());
             // Switch Statement (Zoo Days)
             switch (day)
@@ -54,6 +55,9 @@ namespace ZooAnimalsAssignment
                     break;
                 case 7:
                     Console.WriteLine("Saturday fun day!!");
+                    break;
+                default:
+                    Console.WriteLine("That was not a day of the week.");
                     break;
             }
 
